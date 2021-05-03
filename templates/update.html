@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block head %}
 <title>App de Tareas - Update</title>
 {% endblock %} {% block body %}
-<div class="content">
+<div class="glass_content">
   <h2 class="app_tittle">Task Update</h2>
   <form action="/update/{{task.id}}" method="POST">
     <input type="text" name="content" id="content" value="{{task.content}}" />
