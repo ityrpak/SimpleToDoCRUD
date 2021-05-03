@@ -1,2 +1,3 @@
-# Song-year-were-born
-A simple app that returns you a song released the year you were born.
+# SimpleToDoCRUD
+
+A simple CRUD webapp made with Flask, Python.

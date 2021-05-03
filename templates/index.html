@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block head %}
+<title>Task Remainder App</title>
+{% endblock %} {% block body %}
+<div class="content">
+  <div class="glass_container">
+    <h1 class="app_tittle">Task Remainder App</h1>
+    {% if tasks|length < 1 %}
+    <div><p class="no_task">No tasks created</p></div>
+
+    {% else %}
+
+    <table class="table_task">
+      <tr class="table_row">
+        <th class="th_creation_date">Creation Date</th>
+        <th class="th_task">Task</th>
+        <th class="th_comments">Comments</th>
+        <th class="th_options">Options</th>
+      </tr>
+      {% for task in tasks %}
+      <tr>
+        <td>{{ task.date_created.date() }}</td>
+        <td>{{ task.content }}</td>
+        <td>{{ task.coments }}</td>
+        <td>
+          <a href="/delete/{{task.id}}">Delete</a>
+          <br />
+          <a href="/update/{{task.id}}">Update</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+
+    <form class="task_form" action="/" method="POST">
+      <input
+        class="task_form_item"
+        type="text"
+        placeholder="Task"
+        name="content"
+        id="content"
+      />
+      <input
+        class="task_form_item"
+        type="text"
+        placeholder="Comments"
+        name="coments"
+        id="coments"
+      />
+      <input class="task_form_item" type="submit" value="Create" />
+    </form>
+  </div>
+</div>
+{%endblock %}
