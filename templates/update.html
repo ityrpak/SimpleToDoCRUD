@@ -2,8 +2,7 @@
 <title>App de Tareas - Update</title>
 {% endblock %} {% block body %}
 <div class="content">
-  <h1>Task Master</h1>
-
+  <h2 class="app_tittle">Task Update</h2>
   <form action="/update/{{task.id}}" method="POST">
     <input type="text" name="content" id="content" value="{{task.content}}" />
     <input type="submit" value="Update" />
