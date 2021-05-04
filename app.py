@@ -13,8 +13,11 @@ class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
     date_created = db.Column(db.DateTime, default=datetime.utcnow())
-    coments = db.Column(db.String(200), nullable=False)
+    comments = db.Column(db.String(200), nullable=False)
 
+
+def __repr__(self):
+    return '<Task %r>' % self.id
 
 # Crear tarea
 
@@ -23,8 +26,8 @@ class Todo(db.Model):
 def index():
     if request.method == 'POST':
         task_content = request.form['content']
-        task_coments = request.form['coments']
-        new_task = Todo(content=task_content, coments=task_coments)
+        task_comments = request.form['comments']
+        new_task = Todo(content=task_content, comments=task_comments)
 
         try:
             db.session.add(new_task)
@@ -60,6 +63,7 @@ def update(id):
 
     if request.method == 'POST':
         task.content = request.form['content']
+        task.comments = request.form['comment']
         try:
             db.session.commit()
             return redirect('/')

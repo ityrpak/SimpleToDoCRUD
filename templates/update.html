@@ -6,6 +6,12 @@
     <h2 class="app_tittle">Task Update</h2>
     <form action="/update/{{task.id}}" method="POST">
       <input type="text" name="content" id="content" value="{{task.content}}" />
+      <input
+        type="text"
+        name="comment"
+        id="comment"
+        value="{{task.comments}}"
+      />
       <input type="submit" value="Update" />
     </form>
   </div>

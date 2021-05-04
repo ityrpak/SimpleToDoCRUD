@@ -20,7 +20,7 @@
       <tr>
         <td>{{ task.date_created.date() }}</td>
         <td>{{ task.content }}</td>
-        <td>{{ task.coments }}</td>
+        <td>{{ task.comments }}</td>
         <td>
           <a href="/delete/{{task.id}}">Delete</a>
           <br />
@@ -43,8 +43,8 @@
         class="task_form_item"
         type="text"
         placeholder="Comments"
-        name="coments"
-        id="coments"
+        name="comments"
+        id="comments"
       />
       <input class="task_form_item" type="submit" value="Create" />
     </form>
