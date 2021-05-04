@@ -1,11 +1,13 @@
 {% extends 'base.html' %} {% block head %}
-<title>App de Tareas - Update</title>
+<title>Task Remainder App - Update</title>
 {% endblock %} {% block body %}
-<div class="glass_content">
-  <h2 class="app_tittle">Task Update</h2>
-  <form action="/update/{{task.id}}" method="POST">
-    <input type="text" name="content" id="content" value="{{task.content}}" />
-    <input type="submit" value="Update" />
-  </form>
+<div class="content">
+  <div class="glass_container">
+    <h2 class="app_tittle">Task Update</h2>
+    <form action="/update/{{task.id}}" method="POST">
+      <input type="text" name="content" id="content" value="{{task.content}}" />
+      <input type="submit" value="Update" />
+    </form>
+  </div>
 </div>
 {%endblock %}
