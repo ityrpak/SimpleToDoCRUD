@@ -87,7 +87,28 @@ td {
 /* Responsive queries */
 
 @media only screen and (max-width: 600px) {
+  .content {
+    width: 90%;
+  }
   .task_form {
     flex-direction: column;
+  }
+  table {
+    font-size: 0.8rem;
+  }
+  .app_tittle {
+    font-size: 1rem;
+  }
+  .th_creation_date {
+    width: 20%;
+  }
+  .th_task {
+    width: 10%;
+  }
+  .th_comments {
+    width: 20%;
+  }
+  .th_options {
+    width: 20%;
   }
 }
