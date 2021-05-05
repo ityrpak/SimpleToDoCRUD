@@ -1,36 +1,40 @@
-# FlaskIntroduction
+# A Simple ToDo CRUD App
 
-This repo has been updated to work with `Python v3.8` and up.
+*Powered by / Desarrollada en:*
 
-### How To Run
-1. Install `virtualenv`:
-```
-$ pip install virtualenv
-```
+<img src="D:\Users\ivan_\Documents\Portfolio\Python\SimpleToDoCRUD\img\python-flask-logo.png" alt="python-flask-logo" style="zoom:50%;" />
 
-2. Open a terminal in the project root directory and run:
-```
-$ virtualenv env
-```
+*Hosted in / Subida en:*
 
-3. Then run the command:
-```
-$ .\env\Scripts\activate
-```
+<img src="D:\Users\ivan_\Documents\Portfolio\Python\SimpleToDoCRUD\img\heroku-vector-logo.png" alt="heroku-vector-logo" style="zoom: 30%;" />
 
-4. Then install the dependencies:
-```
-$ (env) pip install -r requirements.txt
-```
+*Link: https://simpletodocrud.herokuapp.com/*
 
-5. Finally start the web server:
-```
-$ (env) python app.py
-```
+## *Forgetful? Not Anymore! :us:*
 
-This server will start on port 5000 by default. You can change this in `app.py` by changing the following line to this:
+With this simple app you will be able of track record of all your chores.
 
-```python
-if __name__ == "__main__":
-    app.run(debug=True, port=<desired port>)
-```
+Did you forget to pick up your clothes at the laundry? :man_facepalming:
+
+Not anymore! :heart_eyes:
+
+:white_circle:Features:
+
+* Create, update and delete functions :+1:
+* Responsive design :sunglasses:
+
+
+
+## *Olvidadizo? Ya No! :es:*
+
+Con esta simple app podrás realizar un seguimiento de todas tus tareas.
+
+Te olvidaste de pasar a buscar la ropa en la lavandería? :man_facepalming:
+
+Ya no! :heart_eyes:
+
+:white_circle:Características:
+
+* Funciones de crear, modificar y borrar :+1:
+* Diseño Responsive :sunglasses:
+
