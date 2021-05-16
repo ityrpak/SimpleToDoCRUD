@@ -2,13 +2,22 @@ from flask import Flask, url_for, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
+# url_for generates URL for the API's endpoint.
+# render_template allows to work with html templates and use blocks.
+# request for creating request objects.
+# redirect for redirecting the client to the target location.
+
+# SQLAlchemy for SQL creating a simple DB.
+
+# datetime for using date time data type.
+
+# Declaring Flask, DB and config.
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
-# Construyo la DB
 
-
+# Building the DB
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
@@ -19,9 +28,8 @@ class Todo(db.Model):
 def __repr__(self):
     return '<Task %r>' % self.id
 
-# Crear tarea
 
-
+# Create task app
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
@@ -40,9 +48,8 @@ def index():
         tasks = Todo.query.order_by(Todo.date_created).all()
         return render_template("index.html", tasks=tasks)
 
-# Borrar Tarea
 
-
+# Delete task app
 @app.route('/delete/<int:id>')
 def delete(id):
     task_to_delete = Todo.query.get_or_404(id)
@@ -54,9 +61,8 @@ def delete(id):
     except:
         return 'Error while deleting task'
 
-# Modificar Tarea
 
-
+# Modify task app
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
     task = Todo.query.get_or_404(id)
