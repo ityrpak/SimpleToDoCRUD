@@ -2,11 +2,11 @@
 
 *Powered by / Desarrollada en:*
 
-<img src="D:\Users\ivan_\Documents\Portfolio\Python\SimpleToDoCRUD\img\python-flask-logo.png" alt="python-flask-logo" style="zoom:50%;" />
+<img src="img\python-flask-logo.png" alt="python-flask-logo" style="zoom:50%;" />
 
 *Hosted in / Subida en:*
 
-<img src="D:\Users\ivan_\Documents\Portfolio\Python\SimpleToDoCRUD\img\heroku-vector-logo.png" alt="heroku-vector-logo" style="zoom: 30%;" />
+<img src="img\heroku-vector-logo.png" alt="heroku-vector-logo" style="zoom: 30%;" />
 
 *Link: https://simpletodocrud.herokuapp.com/*
 
